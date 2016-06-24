@@ -1,0 +1,463 @@
+@CHARSET "ISO-8859-1";
+.CSSTableGenerator {
+margin:0px;padding:0px;
+width:101%;	box-shadow: 10px 10px 5px #888888;
+border:1px solid #f7e6e9;
+margin-top:-20px;
+margin-left:-10px;
+
+
+-moz-border-radius-bottomleft:0px;
+-webkit-border-bottom-left-radius:0px;
+border-bottom-left-radius:0px;
+
+-moz-border-radius-bottomright:0px;
+-webkit-border-bottom-right-radius:0px;
+border-bottom-right-radius:0px;
+
+-moz-border-radius-topright:0px;
+-webkit-border-top-right-radius:0px;
+border-top-right-radius:0px;
+
+-moz-border-radius-topleft:0px;
+-webkit-border-top-left-radius:0px;
+border-top-left-radius:0px;
+}.CSSTableGenerator table{
+width:100%;
+height:100%;
+margin:0px;padding:0px;
+}.CSSTableGenerator tr:last-child td:last-child {
+-moz-border-radius-bottomright:0px;
+-webkit-border-bottom-right-radius:0px;
+border-bottom-right-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+-moz-border-radius-topleft:0px;
+-webkit-border-top-left-radius:0px;
+border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+-moz-border-radius-topright:0px;
+-webkit-border-top-right-radius:0px;
+border-top-right-radius:0px;
+}.CSSTableGenerator tr:last-child td:first-child{
+-moz-border-radius-bottomleft:0px;
+-webkit-border-bottom-left-radius:0px;
+border-bottom-left-radius:0px;
+}.CSSTableGenerator tr:hover td{
+background-color:#f9bbbb;
+}
+.CSSTableGenerator td{
+vertical-align:middle;
+
+background-color:#f7e6e9;
+border:1px solid #f7e6e9;
+border-width:0px 1px 1px 0px;
+text-align:left;
+padding:7px;
+font-size:10px;
+font-family:arial;
+font-weight:normal;
+color:#000000;
+}.CSSTableGenerator tr:last-child td{
+border-width:0px 1px 0px 0px;
+}.CSSTableGenerator tr td:last-child{
+border-width:0px 0px 1px 0px;
+}.CSSTableGenerator tr:last-child td:last-child{
+border-width:0px 0px 0px 0px;
+}
+.CSSTableGenerator tr:first-child th{
+	background:-o-linear-gradient(bottom, #DF0327 5%, #DF0327 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #DF0327), color-stop(1, #DF0327) );	background:-moz-linear-gradient( center top, #DF0327 5%, #DF0327 100% );	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#DF0327", endColorstr="#DF0327");	background: -o-linear-gradient(top,#DF0327,0057af);
+background-color:#DF0327;
+border:0px solid #f7e6e9;
+text-align:center;
+border-width:0px 0px 1px 1px;
+font-size:14px;
+font-family:arial;
+font-weight:bold;
+color:#f7e6e9;
+}
+.CSSTableGenerator tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #DF0327 5%, #DF0327 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #DF0327), color-stop(1, #DF0327) );	background:-moz-linear-gradient( center top, #DF0327 5%, #DF0327 100% );	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#DF0327", endColorstr="#DF0327");	background: -o-linear-gradient(top,#DF0327,0057af);
+background-color:#DF0327;
+}
+.CSSTableGenerator tr:first-child td:first-child{
+border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:first-child td:last-child{
+border-width:0px 0px 1px 1px;
+}
+
+
+.CSSTableGenerator2 {
+	margin:0px;padding:0px;
+	
+	border:0px solid #f7e6e9;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}.CSSTableGenerator2 table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.CSSTableGenerator2 tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.CSSTableGenerator2 table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.CSSTableGenerator2 table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.CSSTableGenerator2 tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.CSSTableGenerator2 tr:hover td{
+	background-color:#b2b2b2;
+		
+
+}
+.CSSTableGenerator2 td{
+	vertical-align:middle;
+	
+	background-color:#e5e5e5;
+
+	border:1px solid #f7e6e9;
+	border-width:0px 0.2px 0.2px 0px;
+	text-align:left;
+	padding:4px;
+	font-size:10px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.CSSTableGenerator2 tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.CSSTableGenerator2 tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.CSSTableGenerator2 tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+
+.form-style-3{
+    width: 100%;
+    font-size: 6px;
+    background: #CCCCCC;
+    padding: 0px 0px 15px 30px;
+    
+    margin-top:-10px;
+    margin-left:-9px;
+}
+.form-style-3 input[type=submit],
+.form-style-3 input[type=text]
+{
+    font-family: serif , "Times New Roman", Times,Georgia ;
+    font-size: 11px;
+    color: #000000;
+	margin_top:-20px;
+}
+.form-style-3 label {
+    
+    margin-top: -20px;
+    font-size: 9px;
+}
+.form-style-3 label > span{
+    
+    margin_top:-20px;
+    width: 150px;
+}
+.form-style-3 input[type=text]
+{
+    margin_top:-20px;
+    border: none;
+    border-bottom: 1px solid #83A4C5;
+    width: 100px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: none;
+    color: black;
+}
+.form-style-4{
+    width: 100%;
+    font-size: 6px;
+    background: #4F0B0B;
+    padding: 30px 0px 15px 30px;
+    border: 1px solid #000000;
+    margin-top:-10px;
+    margin-left:-9px;
+}
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button],
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+.form-style-4 textarea,
+
+.form-style-4 label
+{
+    font-family: serif , "Times New Roman", Times,Georgia ;
+    font-size: 11px;
+    color: #fff;
+
+}
+.form-style-4 select
+{
+    font-family: serif , "Times New Roman", Times,Georgia ;
+    font-size: 11px;
+    color: red;
+
+}
+.form-style-4 label {
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style-4 label > span{
+    display: inline-block;
+    float: left;
+    width: 150px;
+}
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+
+.form-style-4 input[type=date]
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: none;
+    color: white;
+}
+.form-style-4 select
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: none;
+    color: white;
+    
+}
+
+.cr_description
+{
+	font-style: italic;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    overflow: hidden;
+    resize:none;
+    height:20px;
+}
+
+.form-style-4 textarea{
+    font-style: italic;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    overflow: hidden;
+    resize:none;
+    height:20px;
+}
+
+.form-style-4 textarea:focus, 
+.form-style-4 input[type=text]:focus,
+.form-style-4 input[type=email]:focus,
+.form-style-4 input[type=email] :focus
+{
+    border-bottom: 1px dashed #D9FFA9;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button]{
+    background: #CCCCCC;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: #576E88;
+    font-weight: bolder;
+}
+.form-style-4 input[type=submit]:hover,
+.form-style-4 input[type=button]:hover{
+background: #394D61;
+color: #CCCCCC;
+font-weight: bolder;
+}
+.form-style-4 select:FOCUS{
+background: #4F0B0B;
+}
+
+
+
+
+.form-style-1{
+    width: 100%;
+    font-size: 6px;
+    background: #4F0B0B;
+    padding: 30px 0px 15px 30px;
+    border: 5px solid #4F0B0B;
+    margin-top:-10px;
+    margin-left:30px;
+}
+.form-style-1 input[type=submit],
+.form-style-1 input[type=button],
+.form-style-1 input[type=text],
+.form-style-1 input[type=email],
+.form-style-1 textarea,
+.form-style-1 input[type=radio],
+.form-style-1 label
+{
+    font-family: serif , "Times New Roman", Times,Georgia ;
+    font-size: 11px;
+    color: #fff;
+
+}
+.form-style-1 select
+{
+    font-family: serif , "Times New Roman", Times,Georgia ;
+    font-size: 11px;
+    color: red;
+
+}
+.form-style-1 label {
+    
+    margin-bottom: 10px;
+}
+.form-style-1 label > span{
+    display: inline-block;
+    float: left;
+    width: 150px;
+}
+.form-style-1 input[type=text],
+.form-style-1 input[type=email],
+
+.form-style-1 input[type=date]
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: none;
+    color: white;
+}
+.form-style-1 select
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: none;
+    color: white;
+    
+}
+
+
+
+.form-style-1 textarea{
+    font-style: italic;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    overflow: hidden;
+    resize:none;
+    height:20px;
+}
+
+.form-style-1 textarea:focus, 
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 input[type=email] :focus
+{
+    border-bottom: 1px dashed #D9FFA9;
+}
+
+.form-style-1 input[type=submit],
+.form-style-1 input[type=button]{
+    background: #CCCCCC;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: #576E86;
+    font-weight: bolder;
+}
+.form-style-1 input[type=submit]:hover,
+.form-style-1 input[type=button]:hover{
+background: #394D61;
+color:#CCCCCC;
+font-weight: bolder;
+}
+.form-style-1 select:FOCUS{
+background: #4F0B0B;
+}
+
+.header
+{
+	height:40px;
+	margin-top: -8px;
+	margin-left:-10px;
+	background-color: #4F0B0B;
+}
+
+.header img
+{
+	padding-left:20px;
+}
+
+.header label
+{
+	position:absolute;
+	top:5px;
+	right: 20px;
+	color: #EC1D23;
+font-size: 1.4em;
+font-weight: bold;
+font-family: Helvetica;
+
+}
+
+.content
+{
+	position:absolute;
+	top:40px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	overflow-y:scroll;
+}
+

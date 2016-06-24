@@ -223,8 +223,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</script>
 	<link rel="stylesheet" href="<?php echo base_url();?>css/table.css" type="text/css" />
 	</head>
-	<body>
-		<div>
+	<body bgcolor="#4F0B0B">
+		<div class="header"><img src="<?php echo base_url();?>images/ooredoologo.png" height="30px"><label>Change Request</label></div>
+		<div class="content">
 		<table>
 			<tr>
 				<td>
