@@ -3,10 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Cr extends CI_Controller
 {
-
-
 	public function __construct()
 	{
+		session_start();
 		parent::__construct();
 		$this->load->model('cr_model','cr',true);
 	}
@@ -200,7 +199,6 @@ class Cr extends CI_Controller
 
 	function show_cr()
 	{
-		session_start();
 		$radiovalue='';
 		$data;
 		//$this->pr($_SESSION['radio']);
@@ -508,7 +506,7 @@ class Cr extends CI_Controller
 		$data['cr_id']=$_POST['cr_id'];
 		$cr_e_data['cr_title']=$_POST['cr_title'];
 		$cr_data=$this->cr->getcr();
-		$this->pr($cr_e_data);
+		//$this->pr($cr_e_data);
 		$data['cr_data'] = $cr_data;
 		$this->load->view('cr_edit',$data);
 	}
