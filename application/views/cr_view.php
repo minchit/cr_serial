@@ -154,6 +154,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$("#process_by").hide();
 				$("#process_by1").hide();
 			}
+			function doconfirm()
+			{
+			    job=confirm("Are you sure to delete permanently?");
+			    if(job!=true)
+			    {
+			        return false;
+			    }
+			}
 			
 			 
 			 $( "#result table tr" ).click(function(e) {
@@ -406,7 +414,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<th>Approval Operations</th>
 						<th>Status Processed</th>
 						<th>Processed By</th> 
-						
+						<th></th>
 					</tr>
 					<?php 
 						foreach ($cr_data as $row)
@@ -447,6 +455,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</td>
 								<td>
 									<?php echo $row->cr_processed_by;?>
+								</td>
+								<td>
+									<?php if($row->cr_processed_by==null or $row->cr_processed_by=='none')
+									{
+										?> 
+										 <a href="<?php echo base_url()."index.php/cr/delete_cr/".$row->cr_id ?>" onclick="return confirm('Are you sure to delete this CR?');"> 
+										<img src="<?php echo base_url();?>images/bin.png" width="20px" > </a>
+									<?php }
+										?>
+									
 								</td>
 								
 							</tr> <?php 

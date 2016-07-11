@@ -114,8 +114,20 @@ class Cr extends CI_Controller
 					setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 				}
 				
-
-				$tmp=$this->cr->save_data('ox_cr_list',$data);
+				$cr_data_del=$this->cr->selectcr_del($data['cr_id']);
+				$cr_array_del=(array)$cr_data_del;
+				if(!empty($cr_array_del))
+				{
+					$con['cr_id'] = $_POST['cr_id'];
+					$data['cr_status']=1;
+					$this->cr->update_cr('ox_cr_list',$con,$data);
+				}
+				else
+				{
+					
+					$tmp=$this->cr->save_data('ox_cr_list',$data);
+				}
+				
 				redirect(base_url());
 			}
 		}
@@ -172,19 +184,43 @@ class Cr extends CI_Controller
 	{
 		/////////////////////////////////////////////////////////    Last CR and Cookies
 		$cr_datalast=$this->cr->lastcr();
-		//$this->pr($cr_data);
-		//$data['cr_data'] = $cr_data2;
 		$last_cr=(string)$cr_datalast[0]->cr_id;
+		
 		preg_match_all('/^([^\d]+)(\d+)/', $last_cr, $match);
-			
 		$text = $match[1][0];
 		$num = $match[2][0];
+		
+		$cr_datalast_del='';
+		$text_del='';
+		$num_del=0;
+		if(!empty($this->cr->lastcr_del()))
+		{
+			$cr_datalast_del=$this->cr->lastcr_del();
+			$last_cr_del=(string)$cr_datalast_del[0]->cr_id;
+			preg_match_all('/^([^\d]+)(\d+)/', $last_cr_del, $match2);
+			$text_del=$match2[1][0];
+			$num_del=$match2[2][0];
+		}
+		
+		if($num_del==0)
+		{
+			$num=$num+1;
+			if(strlen($num)==3)
+			{$num='0'.$num;}
+			$last_cr=$text.$num;
+			$data['last_cr']=$last_cr;
+		}
+		else 
+		{
+			//$num_del=$num_del+1;
+			if(strlen($num_del)==3)
+			{$num_del='0'.$num_del;}
+			$last_cr=$text_del.$num_del;
+			$data['last_cr']=$last_cr;
+		}
+		
 		//$last_cr=$last_cr+1;
-		$num=$num+1;
-		if(strlen($num)==3)
-		{$num='0'.$num;}
-		$last_cr=$text.$num;
-		$data['last_cr']=$last_cr;
+		
 			
 			
 		if(!isset($_COOKIE['cr_processed_by'])) {
@@ -510,7 +546,21 @@ class Cr extends CI_Controller
 		$data['cr_data'] = $cr_data;
 		$this->load->view('cr_edit',$data);
 	}
-
+	
+	public function delete_cr()
+	{
+		$con['cr_id'] = $this->uri->segment(3);
+		$data['cr_status']=0;
+		//preg_match_all('!\d+!', $con['cr_id'], $matches);
+		//print_r($matches);
+		//$data['cr_id']="CC".implode('',$matches[0]);
+		$data['cr_id']=$con['cr_id'];
+		//$this->pr($con['cr_id']);
+		//exit();
+		$this->cr->cancel_cr('ox_cr_list',$con,$data);
+		redirect(base_url());
+	}
+	
 	public function select_cr()
 	{
 		if($this->input->post('cr_id')!=null)

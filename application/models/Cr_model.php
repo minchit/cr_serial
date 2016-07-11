@@ -31,6 +31,16 @@ class Cr_model extends CI_Model
 		}
 	}
 	
+	function cancel_cr($table,$con,$data)
+	{
+		$this->db->where($con);
+		if($this->db->update($table,$data)){
+			return 1;
+		}else{
+			return 0;
+		}
+	}
+	
 	function selectcr($cr_id)
 	{
 		if(is_array($cr_id) && $_SERVER['REQUEST_METHOD'] == 'POST')
@@ -149,10 +159,20 @@ class Cr_model extends CI_Model
 			$this->db->select('cr.*');
 			$this->db->from('ox_cr_list as cr');
 			$this->db->where('cr.cr_id',$cr_id);
-			
+			$this->db->where('cr.cr_status',1);
 			$query=$this->db->get();
 			return $query->result();
 		}
+	}
+	
+	function selectcr_del($cr_id)
+	{
+		$this->db->select('cr.*');
+		$this->db->from('ox_cr_list as cr');
+		$this->db->where('cr.cr_id',$cr_id);
+		$this->db->where('cr.cr_status',0);
+		$query=$this->db->get();
+		return $query->result();
 	}
 	
 	function getcr()
@@ -161,6 +181,7 @@ class Cr_model extends CI_Model
 		$this->db->select('cr.*');
 		$this->db->from('ox_cr_list as cr');
 		$this->db->order_by('cr_id','desc');
+		$this->db->where('cr.cr_status',1);
 		$this->db->limit(20);
 		//$this->db->where('u.user_id',$u);
 		//$this->db->where('u.password',$p);
@@ -173,11 +194,27 @@ class Cr_model extends CI_Model
 	
 		$this->db->select('cr.*');
 		$this->db->from('ox_cr_list as cr');
+		$this->db->where('cr_status',1);
 		$this->db->order_by('cr_id','desc');
 		$this->db->limit(1);
 		//$this->db->where('u.user_id',$u);
 		//$this->db->where('u.password',$p);
 		$query = $this->db->get();
+		return $query->result();
+	}
+	
+	function lastcr_del()
+	{
+	
+		$this->db->select('cr.*');
+		$this->db->from('ox_cr_list as cr');
+		$this->db->where('cr_status',0);
+		$this->db->order_by('cr_id','asc');
+		$this->db->limit(1);
+		//$this->db->where('u.user_id',$u);
+		//$this->db->where('u.password',$p);
+		$query = $this->db->get();
+		
 		return $query->result();
 	}
 }
